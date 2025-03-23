@@ -1,0 +1,10 @@
+- name: Install Redis on Rocky Linux
+  ansible.builtin.dnf:
+    name: redis
+    state: present
+
+- name: Start and enable redis
+  service:
+    name: redis
+    state: started
+    enabled: true
